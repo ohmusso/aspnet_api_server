@@ -26,12 +26,6 @@ app.MapPost("/getApi", async (TestData data, TestDataDb db) =>
         return Results.NoContent();
     }
     return Results.Ok(dbGetData);
-
-
-    // add db
-    //db.TestDatas.Add(data);
-    //await db.SaveChangesAsync();
-    //return Results.Created($"/getapi/{data.Id}", data);
 });
 
 app.MapPost("/addApi", async (TestData data, TestDataDb db) =>
